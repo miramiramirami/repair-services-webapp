@@ -1,0 +1,21 @@
+// types.js
+module.exports = {
+	'.html': 'text/html',
+	'.css': 'text/css',
+	'.js': 'text/javascript',
+	'.json': 'application/json',
+	'.png': 'image/png',
+	'.jpg': 'image/jpeg',
+	'.jpeg': 'image/jpeg',
+	'.gif': 'image/gif',
+	'.svg': 'image/svg+xml',
+	'.woff': 'font/woff',
+	'.woff2': 'font/woff2',
+	'.ttf': 'font/ttf',
+	'.otf': 'font/otf',
+	'.eot': 'application/vnd.ms-fontobject',
+	'.mp4': 'video/mp4',
+	'.mp3': 'audio/mpeg',
+	'.wav': 'audio/wav',
+	'.ogg': 'audio/ogg',
+}

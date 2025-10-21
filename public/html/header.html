@@ -1,0 +1,76 @@
+<head>
+	<link rel="stylesheet" href="/css/header.css" />
+	<link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<header id="main-header" class="header">
+	<div
+		style="
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 1000px;
+			margin: 0 auto;
+		"
+	>
+		<div>
+			<a href="/" class="logo">HomeFix</a>
+		</div>
+
+		<nav class="navigation" id="header-nav">
+			<a href="/services" class="header-item">Список услуг</a>
+			<div id="header-nav-generate"></div>
+		</nav>
+	</div>
+</header>
+
+<script>
+	async function loadHeaderNavigation() {
+		const navElement = document.getElementById('header-nav-generate')
+
+		try {
+			const response = await fetch('/api/profile', {
+				credentials: 'include',
+			})
+
+			if (response.ok) {
+				const data = await response.json()
+
+				navElement.innerHTML = `
+                    <a href="/profile" class='header-item'>Личный кабинет</a>
+                    ${
+											data.user.role === 'admin'
+												? `<a href='/admin'class='header-item'">Админка</a>`
+												: ''
+										}
+                    <button onclick="logout()" class='button'
+                       
+                    ">Выйти</button>
+                `
+			} else {
+				navElement.innerHTML = `
+                    <a href="/login" class="button">Регистрация</a>
+                `
+			}
+		} catch (error) {
+			navElement.innerHTML = `
+                <a href="/login" class="button">Войти</a>
+                <a href="/register" class="button">Регистрация</a>
+            `
+		}
+	}
+
+	async function logout() {
+		try {
+			await fetch('/logout', {
+				method: 'POST',
+				credentials: 'include',
+			})
+			window.location.href = '/'
+		} catch (error) {
+			console.error('Ошибка входа', error)
+		}
+	}
+
+	loadHeaderNavigation()
+</script>

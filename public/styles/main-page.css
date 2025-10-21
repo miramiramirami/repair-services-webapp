@@ -1,0 +1,101 @@
+.main-title {
+	font-weight: 400;
+	font-size: 3rem;
+	margin-bottom: 16px;
+	letter-spacing: 0.1rem;
+}
+
+.main-text {
+	color: #181818;
+	font-size: 0.8rem;
+	margin-bottom: 3rem;
+}
+
+.main-page-container {
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.main-service-button {
+	background-color: #ca263e;
+	color: white;
+	text-decoration: none;
+	padding: 12px 24px;
+	border-radius: 15px;
+	margin-right: 1rem;
+}
+
+.main-register-button {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	padding: 12px 24px;
+	border-radius: 15px;
+}
+
+.main-title-section {
+	margin-bottom: 7rem;
+}
+
+.main-description-section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 10px;
+	margin-bottom: 3rem;
+}
+
+.main-card {
+	background-color: #f4f5fb;
+	padding: 2rem;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: row;
+}
+
+.main-card-title {
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+
+.main-card-description {
+	font-size: 14px;
+	color: #3a3a3a;
+}
+
+.card-img {
+	width: 60px;
+	height: 60px;
+	margin-top: 20px;
+	margin-left: 16px;
+}
+
+.service-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.service-main-page {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 16px 8px;
+	border-bottom: 0.5px solid #b2b2b2;
+	width: 100%;
+}
+
+.service-main-page p,
+span {
+	font-size: 14px;
+	color: #464646;
+}
+
+.service-main-link {
+	text-decoration: none;
+	color: #464646;
+	background-color: #f4f5fb;
+	padding: 12px 24px;
+	border-radius: 15px;
+	max-width: fit-content;
+}

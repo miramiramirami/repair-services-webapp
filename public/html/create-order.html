@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Создать заявку</title>
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/create-order.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1 style="margin-bottom: 16px; text-align: center; font-weight: 400">
+				Создать заявку
+			</h1>
+
+			<div id="selectedServiceInfo" class="selected-service"></div>
+
+			<form id="orderForm">
+				<div class="orderForm">
+					<div class="orderForm-item">
+						<label for="service">Услуга:</label>
+						<select id="service" name="service_id" required>
+							<option value="">Выберите услугу</option>
+						</select>
+					</div>
+
+					<div class="orderForm-item">
+						<label for="user_phone">Телефон для связи</label>
+						<input type="number" id="user_phone" name="user_phone" />
+					</div>
+
+					<div class="orderForm-item">
+						<label for="user_address">Адресс</label>
+						<input
+							type="text"
+							id="user_address"
+							name="user_address"
+							placeholder="Улица, Дом, квартира"
+						/>
+					</div>
+
+					<div
+						class="orderForm-item"
+						style="display: flex; flex-direction: column; gap: 16px"
+					>
+						<label for="description">Описание задачи (необязательно):</label>
+						<textarea
+							id="description"
+							name="description"
+							rows="5"
+							placeholder="Опишите подробно вашу задачу..."
+						></textarea>
+					</div>
+				</div>
+
+				<button type="submit" class="button-main form-button">
+					Отправить заявку
+				</button>
+			</form>
+
+			<p><a href="/profile">← Назад в профиль</a></p>
+		</div>
+
+		<script src="/js/create-order.js"></script>
+	</body>
+</html>

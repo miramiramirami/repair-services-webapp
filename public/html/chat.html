@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Чат</title>
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/chat.css" />
+		<style></style>
+	</head>
+	<body>
+		<div class="chat-container">
+			<div class="chat-header">
+				<h2 style="font-weight: 400" id="chatTitle">Загрузка...</h2>
+			</div>
+
+			<div class="messages-container" id="messagesContainer">
+				<div class="loading">Загрузка сообщений...</div>
+			</div>
+
+			<form class="message-form" id="messageForm">
+				<input
+					type="text"
+					class="message-input"
+					id="messageInput"
+					placeholder="Введите сообщение..."
+					required
+				/>
+				<button type="submit" class="send-button">Отправить</button>
+			</form>
+		</div>
+
+		<script src="/js/chat.js"></script>
+	</body>
+</html>

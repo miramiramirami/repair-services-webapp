@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Панель администратора</title>
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/admin.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="">
+				<h1 style="margin-bottom: 1.5rem; font-weight: 400">
+					Панель администратора
+				</h1>
+
+				<button
+					id="addServiceBtn"
+					style="font-size: 18px; padding: 8px 16px; margin-bottom: 16px"
+				>
+					Добавить услугу
+				</button>
+			</div>
+
+			<div id="modal" class="modal">
+				<div class="modal-content">
+					<h2 style="margin-bottom: 16px">Добавить услугу</h2>
+					<form id="serviceForm" enctype="multipart/form-data">
+						<p>
+							<label>Название:</label>
+							<input type="text" id="serviceName" required />
+						</p>
+						<p>
+							<label>Изображение</label>
+							<input type="file" id="serviceImage" accept="image/*" />
+						</p>
+						<p>
+							<label>Описание:</label>
+							<textarea id="serviceDescription" required></textarea>
+						</p>
+						<p>
+							<label>Цена:</label>
+							<input type="number" id="servicePrice" step="0.01" required />
+						</p>
+						<p>
+							<label>
+								<input type="checkbox" id="serviceActive" checked /> Активна
+							</laывbel>
+						</p>
+						<p>
+							<button type="submit">Сохранить</button>
+							<button type="button" onclick="closeModal()">Отмена</button>
+						</p>
+					</form>
+				</div>
+			</div>
+
+			<div class="content">
+				<h2 style="font-weight: 400; margin-bottom: 1.5rem; font-size: 2rem">
+					Все заявки
+				</h2>
+				<div id="ordersList" class="orders-grid"></div>
+				<div
+					id="pagination"
+					style="
+						margin-top: 20px;
+						text-align: center;
+						display: flex;
+						justify-content: center;
+						gap: 5px;
+						flex-wrap: wrap;
+					"
+				></div>
+			</div>
+
+			<div class="services-section">
+				<h2>Услуги</h2>
+				<div id="servicesList">Загрузка...</div>
+				<div
+					id="servicesPagination"
+					style="
+						margin-top: 20px;
+						text-align: center;
+						display: flex;
+						justify-content: center;
+						gap: 5px;
+						flex-wrap: wrap;
+					"
+				></div>
+			</div>
+		</div>
+
+		<script src="/js/admin.js"></script>
+	</body>
+</html>

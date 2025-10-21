@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Профиль</title>
+		<style></style>
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/profile.css" />
+	</head>
+	<body>
+		<h1 class='headline' style='text-align: center; margin-top: 32px; color: rgba(0, 0, 0, 0.677);'>Личный кабинет</h1>
+		<div class="container">
+			
+
+			<nav class="sidebar">
+				<ul class="nav-list">
+					<li>
+						<a href="" class="nav-link active" data-tab="profile"
+							>Информация</a
+						>
+					</li>
+					<li>
+						<a href="" class="nav-link" data-tab="orders">Мои заявки</a>
+					</li>
+					<li >
+						<a href=""  class="nav-link" data-tab="chats">Чаты</a>
+					</li>
+				</ul>
+			</nav>
+
+			<main class="main-content">
+			<section id='profile' class="user-info active">
+				<h2 style='font-weight: 400; margin-bottom: 16px;'>Информация о пользователе</h2>
+				<div class='info'>
+					<div class="info-grid">
+						<p>Имя: <span id="userName"></span></p>
+						<p>Email: <span id="userEmail"></span></p>
+						<p>Телефон: <span id="userPhone"></span></p>
+						<p><strong id="userRole"></strong></p>
+					</div>
+				</div>
+				<button id="editProfileBtn" class="edit-btn">Изменить</button>
+
+				<div id="editModal" class="modal" style="display: none">
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<h2>Редактировать профиль</h2>
+						<form id="editProfileForm">
+							<label>
+								Имя:
+								<input type="text" id="editName" required />
+							</label>
+							<label>
+								Email:
+								<input type="email" id="editEmail" required />
+							</label>
+							<label>
+								Телефон:
+								<input type="tel" id="editPhone" required />
+							</label>
+							<button type="submit">Сохранить</button>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<div class="actions" id="order-button"></div>
+
+			<section id='orders' class="orders">
+				<div class='orders-header'>
+					<h2 style='margin-bottom: 16px; font-weight: 400;'>Мои заявки</h2>
+					<a class='create-button' href="/create-order">Создать заявку</a>
+				</div>
+				
+				
+				<div id="ordersList">
+					<button
+						id="loadMoreBtn"
+						style="display: none; margin-top: 20px; padding: 10px 20px"
+					>
+						Еще
+					</button>
+				</div>
+			</section>
+
+
+				<section id='chats'>
+					<div class="chats-section">
+						<h2 style='margin-bottom: 16px; font-weight: 400;'>Чаты</h2>
+						<div id="chatsList">
+							
+						</div>
+					</div>
+				</section>
+			</main>		
+			
+
+		<script src="/js/profile.js"></script>
+		
+	</body>
+</html>

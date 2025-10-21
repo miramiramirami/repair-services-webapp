@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Наши услуги</title>
+
+		<link rel="stylesheet" href="/styles/main.css" />
+		<link rel="stylesheet" href="/styles/services.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="headline">Список всех услуг</h1>
+
+			<div class="services-grid" id="servicesList"></div>
+
+			<div
+				id="pagination"
+				style="
+					margin-top: 20px;
+					text-align: center;
+					display: flex;
+					justify-content: center;
+					gap: 5px;
+					flex-wrap: wrap;
+				"
+			></div>
+		</div>
+
+		<script src="/js/services.js"></script>
+
+		<div id="serviceModal" class="modal">
+			<div class="modal-content">
+				<span class="close" id="modalClose">&times;</span>
+
+				<div style="display: flex; align-items: end">
+					<h2
+						class="service-name"
+						style="margin: 0 auto 16px auto; font-size: 18px"
+						id="modalServiceName"
+					></h2>
+				</div>
+
+				<div class="modal-description">
+					<p id="modalServiceDescription"></p>
+				</div>
+				<p id="modalServicePrice" class="modal-price"></p>
+
+				<button id="modalOrderBtn" class="order-btn">Заказать услугу</button>
+			</div>
+		</div>
+	</body>
+</html>

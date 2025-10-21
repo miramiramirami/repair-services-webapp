@@ -1,0 +1,179 @@
+h1 {
+	text-align: center;
+	color: #2c3e50;
+	margin-bottom: 2rem;
+}
+
+.services-grid {
+	display: grid;
+	grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.service-name {
+	font-weight: 400;
+	background-color: #ca263e;
+	padding: 12px 24px;
+	font-size: 16px;
+	color: white;
+	border-radius: 15px;
+}
+
+.service-card {
+	background: white;
+	border-radius: 15px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 1.5rem;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 1px solid #e0e0e0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	height: 100px;
+	cursor: pointer;
+}
+
+.service-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+	color: #2c3e50;
+	font-weight: 400;
+	font-size: 1.3rem;
+}
+
+.service-card .price {
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: #0000007c;
+}
+
+.service-card .order-btn {
+	background: #ca263e;
+	color: white;
+	border: none;
+	padding: 0.8rem 1.5rem;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1rem;
+	width: 50%;
+	transition: background 0.3s ease;
+	margin-top: auto;
+	align-self: center;
+}
+
+.service-card .order-btn:hover {
+	background: #ca263f89;
+}
+
+.service-card .order-btn:disabled {
+	background: #bdc3c7;
+	cursor: not-allowed;
+}
+
+.no-services {
+	text-align: center;
+	color: #7f8c8d;
+	font-size: 1.2rem;
+	grid-column: 1 / -1;
+}
+
+.read-more-btn::after {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 8px;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid currentColor;
+	vertical-align: middle;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	box-sizing: border-box;
+}
+
+.modal-content {
+	background-color: #fff;
+	border-radius: 12px;
+	width: min(90vw, 600px);
+	max-width: 600px;
+	padding: 20px;
+	position: relative;
+	max-height: 90vh;
+	overflow: auto;
+}
+
+.close {
+	color: #aaa;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 15px;
+}
+
+#modalServiceName {
+	margin: 0 0 8px 0;
+}
+
+.modal-price {
+	font-size: 1.5em;
+	color: #808080;
+	font-weight: 600;
+	display: inline-block;
+	padding: 12px 16px;
+	border-radius: 15px;
+	margin-bottom: 0.8rem;
+	align-self: right;
+}
+
+.modal-description {
+	font-size: 18px;
+	margin-bottom: 24px;
+	line-height: 1.5;
+}
+
+#modalOrderBtn {
+	display: block;
+	margin: 0 auto;
+	min-width: 180px;
+	padding: 0.8rem 1.5rem;
+}
+
+.order-btn {
+	background: #ca263e;
+	color: white;
+	border: none;
+	padding: 0.8rem 1.5rem;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: background 0.3s ease;
+}
+
+.order-btn:hover {
+	background: #b01e32;
+}
+
+.order-btn:disabled {
+	background: #bdc3c7;
+	cursor: not-allowed;
+}

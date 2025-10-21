@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Выход</title>
+		<link rel="stylesheet" href="/css/main.css" />
+	</head>
+	<body>
+		<h2>Вы уверены что хотите выйти?</h2>
+
+		<form action="/logout" method="POST">
+			<button type="submit">Выйти</button>
+		</form>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				document.querySelector('form').submit()
+			})
+		</script>
+	</body>
+</html>
