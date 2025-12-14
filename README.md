@@ -1,1 +1,15 @@
+# Repair Services Platform
+
+A full-stack web application built with **pure Node.js** (no frameworks) for managing repair services and orders.
+
+> **Learning Project**: This was my first Node.js project built from scratch without frameworks. Built to understand core web development concepts.
+
 ![Demo](https://raw.githubusercontent.com/miramiramirami/repair-services-webapp/main/gifs/test1.gif)
+
+## Features
+
+- User authentication with session management
+- Real-time chat system with WebSocket
+- Admin panel with role-based access
+- File upload functionality
+- Order management system
