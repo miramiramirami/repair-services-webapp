@@ -2,5 +2,8 @@
   "dependencies": {
     "formidable": "^3.5.4",
     "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }
