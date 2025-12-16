@@ -1,15 +1,30 @@
-# Repair Services Platform
+# Платформа сервисных услуг
 
-A full-stack web application built with **pure Node.js** (no frameworks) for managing repair services and orders.
+Полноценное full-stack веб-приложение, реализованное на **чистом Node.js** без использования фреймворков, для управления сервисными услугами, заказами и встроенным чатом.
 
-> **Learning Project**: This was my first Node.js project built from scratch without frameworks. Built to understand core web development concepts.
+> **Про проект**: это мой первый проект на Node.js, полностью реализованный с нуля без использования фреймворков. Создавался для глубокого понимания внутренних механизмов веб-разработки и работы на более низких уровнях абстракции.
 
 ![Demo](https://raw.githubusercontent.com/miramiramirami/repair-services-webapp/main/gifs/test1.gif)
 
-## Features
+# Возможности
 
-- User authentication with session management
-- Real-time chat system with WebSocket
-- Admin panel with role-based access
-- File upload functionality
-- Order management system
+## Работа с базой данных MySQL
+
+- Используется пул соединений
+- Прямые SQL-запросы без ORM
+
+## Аутентификация и авторизация пользователей
+
+- Регистрация, вход и выход из системы
+- Управление сессиями без сторонних библиотек
+- Контроль доступа к защищённым маршрутам
+
+![Demo](https://raw.githubusercontent.com/miramiramirami/repair-services-webapp/main/gifs/auth.gif)
+
+## Административная панель с разграничением прав доступа \*\*
+
+![Demo](https://raw.githubusercontent.com/miramiramirami/repair-services-webapp/main/gifs/admin.gif)
+
+- Создание услуг
+- Изменение статуса услуги
+- Удаление
