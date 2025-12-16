@@ -6,18 +6,25 @@
 
 ![Demo](https://raw.githubusercontent.com/miramiramirami/repair-services-webapp/main/gifs/test1.gif)
 
-# Возможности
-
 ## Работа с базой данных MySQL
 
 - Используется пул соединений
 - Прямые SQL-запросы без ORM
+- Ручная обработка транзакций и ошибок
+
+## Дополнительно
+
+- Ручной парсинг HTTP-запросов
+- Обработка статических файлов
+
+# Возможности
 
 ## Аутентификация и авторизация пользователей
 
 - Регистрация, вход и выход из системы
 - Управление сессиями без сторонних библиотек
 - Контроль доступа к защищённым маршрутам
+- Разграничение ролей (пользователь / администратор)
 
 ![Demo](https://raw.githubusercontent.com/miramiramirami/repair-services-webapp/main/gifs/auth.gif)
 
@@ -25,6 +32,27 @@
 
 ![Demo](https://raw.githubusercontent.com/miramiramirami/repair-services-webapp/main/gifs/admin.gif)
 
-- Создание услуг
-- Изменение статуса услуги
+- Создание и редактирование услуг
+- Изменение статуса услуг
 - Удаление
+- Управление заказами пользователей
+
+![Demo](https://raw.githubusercontent.com/miramiramirami/repair-services-webapp/main/gifs/adminservices.gif)
+
+## Создание заказа
+
+- Создание заказа пользователем
+- Привязка заказа к конкретной услуге
+
+![Demo](https://raw.githubusercontent.com/miramiramirami/repair-services-webapp/main/gifs/order.gif)
+
+## Изменение статуса заказа и встроенный чат в реальном времени (WebSocket)
+
+- Изменение статусов заказа (создан / в работе / завершён)
+- Связь заказа с чатом
+- Реализация чата на чистом WebSocket без сторонних библиотек
+- Создание чата автоматически при изменении статуса заказа
+- Общение пользователя и администратора в реальном времени
+- Хранение истории сообщений в базе данных
+
+![Demo](https://raw.githubusercontent.com/miramiramirami/repair-services-webapp/main/gifs/chats.gif)
